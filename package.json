@@ -1,0 +1,34 @@
+{
+  "name": "@toikit/serializer",
+  "version": "1.0.0",
+  "description": "Toikit serializer use for Toikit Framework",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run test",
+    "build": "rm -rf ./dist && npx tsc && npx tsc-alias"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toikit/toikit-serializer.git"
+  },
+  "keywords": [
+    "toikit",
+    "server",
+    "nodejs",
+    "serializer"
+  ],
+  "author": "Toikit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toikit/toikit-serializer/issues"
+  },
+  "homepage": "https://github.com/toikit/toikit-serializer#readme",
+  "dependencies": {
+    "@toikit/toikit": "^1.1.1",
+    "@types/express": "^5.0.2",
+    "typescript": "^5.8.3"
+  }
+}
