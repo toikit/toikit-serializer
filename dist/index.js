@@ -13,7 +13,7 @@ class SerializerProvider {
         this.res.status(code).json(errors);
     }
     exception(e, data = {}) {
-        console.error(e);
+        console.log(e);
         this.res.status(500).json(data);
     }
 }

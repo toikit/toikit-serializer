@@ -16,7 +16,7 @@ export class SerializerProvider {
   }
   
   exception(e, data = {}) {
-    console.error(e);
+    console.log(e);
     this.res.status(500).json(data);
   }
 }
