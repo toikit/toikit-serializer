@@ -22,12 +22,12 @@ class SerializerController extends toikit_1.BaseController {
     getSerializer() {
         return new SerializerProvider();
     }
-    async handle(method, req, res) {
-        this.request = req;
-        this.response = res;
-        this.serializer = this.getSerializer();
-        await this.serializer.setResponse(res);
+    handle(method, req, res) {
         try {
+            this.request = req;
+            this.response = res;
+            this.serializer = this.getSerializer();
+            this.serializer.setResponse(res);
             super.handle(method, req, res);
         }
         catch (e) {

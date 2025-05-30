@@ -11,5 +11,5 @@ export declare class SerializerController extends BaseController {
     protected request: any;
     protected response: any;
     getSerializer(): SerializerProvider;
-    handle(method: any, req: any, res: any): Promise<void>;
+    handle(method: any, req: any, res: any): void;
 }

@@ -30,16 +30,12 @@ export class SerializerController extends BaseController {
     return new SerializerProvider();
   }
   
-  async handle(method, req, res){
-    this.request = req;
-    this.response = res;
-    this.serializer = this.getSerializer();
-
-    // Perform any necessary operations before the controller action
-    // For example, logging or validating user authentication
-    await this.serializer.setResponse(res);
-
+  handle(method, req, res){
     try {
+      this.request = req;
+      this.response = res;
+      this.serializer = this.getSerializer();
+      this.serializer.setResponse(res);
       super.handle(method, req, res);
     } catch (e) {
       this.serializer.exception(e);
